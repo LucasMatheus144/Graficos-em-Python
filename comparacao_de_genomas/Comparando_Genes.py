@@ -14,4 +14,15 @@ entrada = entrada.replace("\n","")
 for l in range(len(entrada)):
     cont[entrada[l]+entrada[l+1]] += 1
     
-print(cont)
+i = 1
+
+for k in cont:
+    transparencia = cont[k]/max(cont.values())
+    saida.write("<div style='width:100px; border:1px solid #111; color:#fff; height:100px; float:left; background-color:rgba(0, 0, 0"+str(transparencia)+"')>"+k+"</div>")
+
+    if i % 4 == 0:
+        saida.write("<div style='clear:both'></div>")
+    
+    i += 1
+    
+saida.close()
