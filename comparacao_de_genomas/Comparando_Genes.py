@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt
 
 entrada = open("bacteria.fasta").readlines()
-saida = open("D:\VsCode\python\Graficos em Python/bacteria.fasta","w")
+saida = open("human.fasta","w")
 
 cont = {}
 
